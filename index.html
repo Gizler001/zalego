@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="zalego.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zalego | First Class in Tourism Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#top">Zalego</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#honours">Honours</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#wishes">Wishes</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <h1>Zalego</h1>
+      <span class="degree">First Class Honours in Tourism Management</span>
+      <p>Hard work, discipline and a love for people and places have paid off. Congratulations on a remarkable achievement.</p>
+      <a class="btn" href="#wishes">Send your wishes</a>
+    </div>
+    <div class="portrait">
+      <!-- To use a photo: delete the letter Z and write <img src="zalego.jpg" alt="Zalego"> -->
+      Z
+    </div>
+  </div>
+  <div class="sun"></div>
+</header>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About Zalego</h2>
+    <p>Zalego is a graduate of Tourism Management who finished with First Class Honours, the highest classification a degree can carry. Throughout the course, Zalego showed commitment, curiosity and a real passion for hospitality, travel and the story of every destination.</p>
+    <p>This page celebrates that success and the family, friends and teachers who stood behind it.</p>
+  </div>
+</section>
+
+<section class="sand" id="honours">
+  <div class="wrap">
+    <h2>The achievement</h2>
+    <div class="achievements">
+      <div><h3>First Class Honours</h3><p>Graduated at the top level in Tourism Management.</p></div>
+      <div><h3>Consistent effort</h3><p>Years of study, assignments, exams and practical training.</p></div>
+      <div><h3>Ready for the industry</h3><p>Prepared to work in tourism, hospitality and travel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Strengths</h2>
+    <div class="skills">
+      <span>Tour planning</span>
+      <span>Customer service</span>
+      <span>Hospitality management</span>
+      <span>Destination marketing</span>
+      <span>Event coordination</span>
+      <span>Communication</span>
+      <span>Teamwork</span>
+      <span>Sustainable tourism</span>
+    </div>
+  </div>
+</section>
+
+<section class="sand" id="journey">
+  <div class="wrap">
+    <h2>The journey</h2>
+    <div class="timeline">
+      <div class="item"><strong>Year 1:</strong> Began studying Tourism Management and learned the foundations of travel and hospitality.</div>
+      <div class="item"><strong>Year 2:</strong> Built deeper knowledge in tour operations, marketing and customer care.</div>
+      <div class="item"><strong>Year 3:</strong> Completed industry attachment and gained hands-on experience.</div>
+      <div class="item"><strong>Graduation:</strong> Finished with First Class Honours.</div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>"The world is a book, and those who do not travel read only one page."
+    <cite>Saint Augustine</cite>
+  </blockquote>
+</section>
+
+<section id="wishes">
+  <div class="wrap">
+    <h2>Leave your congratulations</h2>
+    <form id="wishForm">
+      <div><label for="name">Your name</label><input id="name" required></div>
+      <div><label for="msg">Your message</label><textarea id="msg" rows="4" required></textarea></div>
+      <button type="submit">Send message</button>
+      <p id="thanks" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>Congratulations, Zalego! &copy; 2026</p>
+</footer>
+
+<script>
+  document.getElementById("wishForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("name").value;
+    document.getElementById("thanks").textContent = "Thank you, " + name + ". Your message has been sent to Zalego.";
+    this.reset();
+  });
+  <script>
+  document.getElementById("wishForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var herNumber = "254769409269";   // CHANGE THIS to her number
+
+    var name = document.getElementById("name").value;
+    var msg  = document.getElementById("msg").value;
+
+    var text = "Hello Zalego, congratulations on your First Class Honours!\n\n"
+             + "From: " + name + "\n"
+             + "Message: " + msg;
+
+    var url = "https://wa.me/" + herNumber + "?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+    document.getElementById("thanks").textContent =
+      "Thank you, " + name + ". WhatsApp is opening. Press send to deliver your message.";
+    this.reset();
+  });
+</script>
+</script>
+</body>
+</html>
